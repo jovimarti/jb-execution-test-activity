@@ -1,3 +1,3 @@
 # jb-execution-test-activity
 
-A Salesforce Marketing Cloud Journey Builder activity to test execution, using Node.js and Socket.IO.
+A Salesforce Marketing Cloud Journey Builder activity to test execution.  Instances of activity execution are logged in memory, with the NodeJS application using Express/SocketIO to allow for communication and management via a dashboard.
