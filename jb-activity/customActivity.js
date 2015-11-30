@@ -78,11 +78,9 @@ define([
     }
 
     function onClickedNext () {
-        console.log(currentStep);
         if (currentStep.key === 'step3') {
             save();
         } else {
-            console.log('next step');
             connection.trigger('nextStep');
         }
     }
@@ -119,7 +117,6 @@ define([
     }
 
     function showStep(step, stepIndex) {
-        console.log(step, stepIndex);
         if (stepIndex && !step) {
             step = steps[stepIndex-1];
         }
