@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/'));
 
 var activitiesExecuted = [];
 
-app.get('/activity-execute', function(req, res) {
+app.post('/activity-execute', function(req, res) {
     res.send(JSON.stringify({
         status: 'OK'
     }));
@@ -32,7 +32,7 @@ io.on('connection', function(socket) {
     });
 
     socket.on('resetActivitiesExecuted', function() {
-        console.log('Executed activity list reset.')
+        console.log('Executed activity list reset.');
         activitiesExecuted = [];
         io.emit('ACTIVITIES_EXECUTED', activitiesExecuted);
     });
