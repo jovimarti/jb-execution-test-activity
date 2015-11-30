@@ -20,7 +20,7 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey": "jb-execution-test-activity",
+        "applicationExtensionKey": "jb-execution-test",
         "save": {
             "url": "https://jb-execution-test-activity.herokuapp.com/activity-save"
         },
