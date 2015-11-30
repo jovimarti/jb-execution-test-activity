@@ -39,9 +39,21 @@ io.on('connection', function(socket) {
     });
 });
 
-app.post('/activity-save', function() {});
-app.post('/activity-validate', function() {});
-app.post('/activity-publish', function() {});
+app.post('/activity-save', function() {
+    res.send(JSON.stringify({
+        status: 'OK'
+    }));
+});
+app.post('/activity-validate', function() {
+    res.send(JSON.stringify({
+        status: 'OK'
+    }));
+});
+app.post('/activity-publish', function() {
+    res.send(JSON.stringify({
+        status: 'OK'
+    }));
+});
 
 http.listen(port, function() {
     console.log('Listening on port ', port, '...');
