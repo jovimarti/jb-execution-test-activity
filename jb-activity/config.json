@@ -15,20 +15,20 @@
         "execute": {
             "inArguments": [],
             "outArguments": [],
-            "url": "https://jb-execution-test-activity.herokuapp.com/activity-execute",
+            "url": "http://h.skipfire.com:89/responder.ashx",
             "useJWT": true
         }
     },
     "configurationArguments": {
         "applicationExtensionKey": "jb-execution-test",
         "save": {
-            "url": "https://jb-execution-test-activity.herokuapp.com/activity-save"
+            "url": "http://h.skipfire.com:89/responder.ashx"
         },
         "publish": {
-            "url": "https://jb-execution-test-activity.herokuapp.com/activity-publish"
+            "url": "http://h.skipfire.com:89/responder.ashx"
         },
         "validate": {
-            "url": "https://jb-execution-test-activity.herokuapp.com/activity-validate"
+            "url": "http://h.skipfire.com:89/responder.ashx"
         }
     },
     "wizardSteps": [
