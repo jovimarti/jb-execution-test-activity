@@ -24,6 +24,7 @@ app.post('/activity-execute', function(req, res) {
 
     console.log('Activity executed at time: ', timestamp.format('MMMM Do YYYY, h:mm:ss a'), ' - total activities executed: ', activitiesExecuted.length);
     io.emit('ACTIVITIES_EXECUTED', activitiesExecuted);
+    io.emit('LOG_REQUEST_DETAILS', req);
 });
 
 io.on('connection', function(socket) {

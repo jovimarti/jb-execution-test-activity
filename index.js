@@ -26,6 +26,10 @@ $(function() {
         $('.total-executed span').html(data.length);
     });
 
+    socket.on('LOG_REQUEST_DETAILS', function(data) {
+        console.log(data);
+    });
+
     reset.click(function() {
         socket.emit('resetActivitiesExecuted');
         alert.fadeIn();
