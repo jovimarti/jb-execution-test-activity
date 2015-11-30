@@ -96,7 +96,7 @@ define([
 
     function onMessageChanged() {
         var message = $('#select1').val();
-        connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
+        connection.trigger('updateButton', { button: 'next', text: 'next', enabled: Boolean(message) });
 
         $('#message').html(message);
     }
