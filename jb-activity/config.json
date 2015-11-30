@@ -16,20 +16,20 @@
         "execute": {
             "inArguments": [],
             "outArguments": [],
-            "url": "/activity-execute",
+            "url": "https://jb-execution-test-activity.herokuapp.com/activity-execute",
             "useJWT": true
         }
     },
     "configurationArguments": {
         "applicationExtensionKey": "jb-execution-test-activity",
         "save": {
-            "url": "/activity-save"
+            "url": "https://jb-execution-test-activity.herokuapp.com/activity-save"
         },
         "publish": {
-            "url": "/activity-publish"
+            "url": "https://jb-execution-test-activity.herokuapp.com/activity-publish"
         },
         "validate": {
-            "url": "/activity-validate"
+            "url": "https://jb-execution-test-activity.herokuapp.com/activity-validate"
         }
     },
     "wizardSteps": [
