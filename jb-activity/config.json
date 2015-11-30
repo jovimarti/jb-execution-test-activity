@@ -1,0 +1,45 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+        "icon": "images/iconSmall.png",
+        "iconSmall": "images/iconLarge.png",
+        "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "REST Execution Test Activity",
+            "description": ""
+        }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [],
+            "outArguments": [],
+            "url": "/activity-execute",
+            "useJWT": true
+        }
+    },
+    "configurationArguments": {
+        "applicationExtensionKey": "<key from app center>",
+        "save": {
+            "url": "/activity-save"
+        },
+        "publish": {
+            "url": "/activity-publish"
+        },
+        "validate": {
+            "url": "/activity-validate"
+        }
+    },
+    "wizardSteps": [
+        { "label": "Step 1", "key": "step1" }
+    ],
+    "userInterfaces": {
+        "configModal": {
+            "height": 200,
+            "width": 300
+        },
+    },
+    "sslNotRequired": true
+}

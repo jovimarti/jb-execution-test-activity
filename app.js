@@ -39,6 +39,10 @@ io.on('connection', function(socket) {
     });
 });
 
+app.post('/activity-save', function() {});
+app.post('/activity-validate', function() {});
+app.post('/activity-publish', function() {});
+
 http.listen(port, function() {
     console.log('Listening on port ', port, '...');
 });
