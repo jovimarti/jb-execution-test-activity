@@ -31,12 +31,8 @@ define([
         connection.trigger('requestEndpoints');
 
         // Disable the next button if a value isn't selected
-        $('#select1').change(function() {
-            var message = $('#select1').val();
-            connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-
-            $('#message').html(message);
-        });
+        $('#select1').on('change',onMessageChanged);
+        $('#select1').on('keyup',onMessageChanged);
 
         $('#payload').on('change',onPayloadChanged);
         $('#payload').on('keyup',onPayloadChanged);
@@ -96,6 +92,13 @@ define([
     function onGotoStep (step) {
         showStep(step);
         connection.trigger('ready');
+    }
+
+    function onMessageChanged() {
+        var message = $('#select1').val();
+        connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
+
+        $('#message').html(message);
     }
 
     function onPayloadChanged() {
