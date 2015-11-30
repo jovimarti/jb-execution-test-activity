@@ -117,6 +117,7 @@ define([
     }
 
     function showStep(step, stepIndex) {
+        console.log(step, stepIndex);
         if (stepIndex && !step) {
             step = steps[stepIndex-1];
         }
