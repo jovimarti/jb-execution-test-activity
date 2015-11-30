@@ -131,7 +131,7 @@ define([
         switch(step.key) {
             case 'step1':
                 $('#step1').show();
-                connection.trigger('updateButton', { button: 'next', enabled: Boolean(getMessage()) });
+                connection.trigger('updateButton', { button: 'next', enabled: Boolean($('#select1').val()) });
                 connection.trigger('updateButton', { button: 'back', visible: false });
                 break;
             case 'step2':
