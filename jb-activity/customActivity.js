@@ -78,9 +78,11 @@ define([
     }
 
     function onClickedNext () {
+        console.log(currentStep);
         if (currentStep.key === 'step3') {
             save();
         } else {
+            console.log('next step');
             connection.trigger('nextStep');
         }
     }
