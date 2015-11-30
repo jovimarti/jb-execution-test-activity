@@ -39,17 +39,17 @@ io.on('connection', function(socket) {
     });
 });
 
-app.post('/activity-save', function() {
+app.post('/activity-save', function(req, res) {
     res.send(JSON.stringify({
         status: 'OK'
     }));
 });
-app.post('/activity-validate', function() {
+app.post('/activity-validate', function(req, res) {
     res.send(JSON.stringify({
         status: 'OK'
     }));
 });
-app.post('/activity-publish', function() {
+app.post('/activity-publish', function(req, res) {
     res.send(JSON.stringify({
         status: 'OK'
     }));
