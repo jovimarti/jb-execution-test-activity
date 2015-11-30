@@ -21,7 +21,7 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey": "<key from app center>",
+        "applicationExtensionKey": "jb-execution-test-activity",
         "save": {
             "url": "/activity-save"
         },
