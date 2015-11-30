@@ -1,0 +1,13 @@
+{
+    "name": "jb-execution-test-activity",
+    "version": "0.1.0",
+    "description": "A sample JB activity to test execution.",
+    "repository": {
+        "type": "git"
+    },
+    "dependencies": {
+        "express": "~4.10.x",
+        "socket.io": "~1.2.x",
+        "moment": "~2.10.x"
+    }
+}

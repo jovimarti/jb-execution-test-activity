@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>A utility for testing Journey Builder custom activity execution.</title>
+
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone.min.js"></script>
+
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="container theme-showcase" role="main">
+            <div id="data-cleared-alert" class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Activity data has been cleared!</strong>
+            </div>
+
+            <div class="total-executed">Total activities executed: <span>0</span></div>
+            <button id="logCsv" type="button" class="btn btn-sm btn-primary">Log CSV to Console</button>
+            <button id="export" type="button" class="btn btn-sm btn-primary">Export CSV</button>
+            <button id="reset-confirm" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Reset</button>
+
+            <table id="data-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Timestamp</th>
+                    <th>Interaction Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Are you sure you want to reset the data?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" id="reset" class="btn btn-sm btn-danger" data-dismiss="modal">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
